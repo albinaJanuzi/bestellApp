@@ -75,7 +75,7 @@ function getCartTemplate(i) {
     const product = cart[i];
     const totalProductPrice = calculateProductPrice(product);
     return `<div>
-            <h3>${product.name}</h3>
+            <h2>${product.name}</h2>
             <p>${product.ingredients}</p>
             <button onclick="productDecrement(${i})"> - </button>
             <span id="clicks-${i}">${product.numberOfProducts}x</span>
