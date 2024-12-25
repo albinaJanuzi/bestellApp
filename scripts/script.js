@@ -15,11 +15,15 @@ function renderProducts() {
 
 function getProductTemplate(i) {
     const product = products[i];
-    return `<div>
-            <h2>${product.name}</h2>
-            <p>${product.ingredients}</p>
-            <p>${product.price.toFixed(2)} €</p>
-            <button onclick="addToCart(${i})"> + </button>
+    return ` <div class="product-row">
+            <div class="product-details">
+                <h2>${product.name}</h2>
+                <p>${product.ingredients}</p>
+                <p class="orange-txt"><strong>${product.price.toFixed(2)} €</strong></p>
+            </div>
+            <div class="product-button">
+                <button class="button-product" onclick="addToCart(${i})"> + </button>
+            </div>
         </div>`;
 }
 

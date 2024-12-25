@@ -83,3 +83,31 @@ h2{
     align-items: center;
     background-color: rgb(247,246,241);
 }
+
+.button-product{
+    border: none;
+    background-color: white;
+    color: rgb(255, 128, 0);
+    font-weight: bold;
+    font-size: 30px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+button{
+    cursor: pointer;
+}
+
+.product-row {
+    display: flex; 
+    justify-content: space-between; 
+    border-bottom: 1px solid #ccc; 
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.product-details {
+    flex: 1; 
+}
+
