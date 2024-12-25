@@ -1,10 +1,8 @@
-/* General reset for margins and padding */
 body {
     margin: 0;
     padding: 0;
 }
 
-/* Header styles */
 header {
     height: 120px;
     background-color: rgb(255,128,0);
@@ -16,29 +14,23 @@ header img {
     width: 200px;
 }
 
-/* Main content container */
 .main-content {
-    display: flex;  /* This will align .left-content and .cart-position horizontally */
+    display: flex;  
     width: 100%;
 }
 
-/* Left content styles */
 .left-content {
-    width: 80%;  /* Takes 70% of the available width */
+    width: 80%;  
 }
 
-.img-position img {
+.pizza-img {
     height: 400px;
     width: 100%;
     object-fit: cover;
 }
 
-
-
-/* Cart content styles */
 .cart-position {
-    width: 20%;  /* Takes 30% of the available width */
-   
+    width: 20%; 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -48,4 +40,22 @@ header img {
     padding: 10px;
     border: 1px solid #ccc;
     height: 100%;
+}
+
+.round-image-container {
+    position: absolute; 
+    bottom: -50px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.round-img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+
+}
+
+.img-position {
+    position: relative; 
 }
