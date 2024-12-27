@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,22 @@
     <script src="./scripts/script.js" defer></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body onload="init()">
     <header>
-        <img src="./img/Logo/Logo.png" alt="">
+        <img src="./img/Logo/Logo.png" alt=""></div>
     </header>
-    
+
     <div class="main-content">
-        <div class="left-content">
+        <div id="productContainer" class="left-content">
             <div class="img-position">
-                <img src="./img/images/pizza.jpg" class="pizza-img"> 
+                <img src="./img/images/pizza.jpg" class="pizza-img">
                 <div class="round-image-container">
-                    <img src="./img/images/roundPhoto.png" class="round-img">
+                    <img src="./img/Favicon/android-chrome-192x192.png" class="round-img">
                 </div>
             </div>
             <div>
-                <h1>Pizza Restaurant</h1>
+                <h1>Vivant</h1>
                 <span class="orange-txt">Bewertung (4,2 von 5 Sternen)</span>
             </div>
 
@@ -34,10 +36,20 @@
             <div id="productContent" class="product-content"></div>
         </div>
 
-        <div class="cart-position">
-            <div id="cartContent" class="cart-content"></div>
+        <div id="cartContent" class="cart-position">
+            <div id="cartContent" class="cart-content">
+
+            </div>
         </div>
     </div>
+    <a href="./index.html"></a>
+    <div class="msg" id="message"></div>
+    <button id="cartButton" onclick="toggleCart()" class="button-show-cart">Cart</button>
+
+    <footer>
+        <img src="./img/Logo/Logo.png" alt=""></div>
+    </footer>
 
 </body>
+
 </html>
