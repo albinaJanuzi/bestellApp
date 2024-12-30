@@ -15,21 +15,6 @@ function renderProducts() {
 }
 
 
-function getProductTemplate(i) {
-    const product = products[i];
-    return ` <div class="product-row">
-            <div class="product-details">
-                <h2>${product.name}</h2>
-                <p>${product.ingredients}</p>
-                <p class="orange-txt"><strong>${product.price.toFixed(2)} €</strong></p>
-            </div>
-            <div class="product-button">
-                <button class="button-product" onclick="addToCart(${i})"> + </button>
-            </div>
-        </div>`;
-}
-
-
 function addToCart(productIndex) {
     const product = products[productIndex];
 
@@ -78,21 +63,7 @@ function checkCart(cartContentRef) {
 }
 
 
-function getCartTemplate(i) {
-    const product = cart[i];
-    const totalProductPrice = calculateProductPrice(product);
-    return `<div>
-            <h2>${product.name}</h2>
-            <p>${product.ingredients}</p>
-            <div class="btn-span-position">
-            <button class="border-none-btn" onclick="productDecrement(${i})"> <img class="img-size" src="./img/images/minus.png"></button>
-            <span id="clicks-${i}">${product.numberOfProducts}x</span>
-            <button class="border-none-btn" onclick="productIncrement(${i})"><img class="img-size" src="./img/images/plus.png"></button>
-            <span class="orange-txt" id="totalPrice-${i}"><strong>${totalProductPrice.toFixed(2)} €</strong></span>
-            <button class="border-none-btn" onclick="deleteProduct(${i})"><img class="img-size" src="./img/images/garbage.png"></button>
-            </div>
-        </div>`;
-}
+
 
 function productIncrement(i) {
     cart[i].numberOfProducts += 1;
@@ -163,7 +134,7 @@ function checkCart(cartContentRef) {
             cartContentRef.innerHTML += getCartTemplate(i);
         }
         cartContentRef.innerHTML += `<h3>Total: ${calculateTotalPrice()} €</h3>
-        <div class="js-center"><button class="order-btn" onclick="completeOrder()">Order Now</button></div>`;
+        <div class="js-center"><button  class="order-btn" onclick="completeOrder()">Order Now</button></div>`;
     }
 }
 
@@ -180,16 +151,6 @@ function completeOrder() {
 }
 
 
-function messageTemplate() {
-    const messageRef = document.getElementById('message')
-    messageRef.innerHTML += `
-    <img class="order-complete" src="./img/images/order-complete.png">
-    <h2>Thank you for your order! Your Pizza will be delivered soon.</h2>
-    <a href="./index.html">Homepage</a>`;
-    messageRef.style.display = 'flex';
-}
-
-
 function completeOrderArray() {
     cart = [];
     saveCartToLocalStorage();
@@ -200,11 +161,15 @@ function completeOrderArray() {
 function toggleCart() {
     const cartContentRef = document.getElementById('cartContent');
     const productContentRef = document.getElementById('productContainer');
+   
 
     if (cartContentRef.style.display === 'none') {
         cartContentRef.style.display = 'block';
         cartContentRef.style.width = '100%';
         productContentRef.style.display = 'none';
+       
+        
+        
 
     } else {
         cartContentRef.style.display = 'none';
